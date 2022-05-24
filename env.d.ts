@@ -1,9 +1,9 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      DATABASE_URL: string;
-      GITHUB_ID: string;
-      GITHUB_SECRET: string;
+      DB_CONN_STRING: string;
+      DB_NAME: string;
+      DB_COLLECTION_NAME: string;
       GOOGLE_CLIENT_ID: string;
       GOOGLE_CLIENT_SECRET: string;
       SPOTIFY_CLIENT_ID: string;
