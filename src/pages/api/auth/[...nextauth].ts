@@ -18,4 +18,10 @@ export default NextAuth({
     signIn: "/auth/signin",
     error: "/auth/error", // Error code passed in query string as ?error=
   },
+  callbacks: {
+    session: async ({ session, user }) => {
+      session.userId = user.id;
+      return Promise.resolve(session);
+    },
+  },
 });
